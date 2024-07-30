@@ -1,5 +1,6 @@
 package dev.jkuschner.FitnessTracker.Activity;
 
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -34,13 +35,13 @@ public class WorkoutController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("")
-    void create(@RequestBody Workout workout) {
+    void create(@Valid @RequestBody Workout workout) {
         workoutRepository.create(workout);
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PutMapping("/{id}")
-    void update(@RequestBody Workout workout, @PathVariable Integer id) {
+    void update(@Valid @RequestBody Workout workout, @PathVariable Integer id) {
         workoutRepository.update(workout, id);
     }
 
