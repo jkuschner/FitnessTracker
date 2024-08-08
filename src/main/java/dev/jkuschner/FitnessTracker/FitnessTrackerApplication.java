@@ -2,6 +2,7 @@ package dev.jkuschner.FitnessTracker;
 
 import dev.jkuschner.FitnessTracker.Activity.Activity;
 import dev.jkuschner.FitnessTracker.Activity.Workout;
+import dev.jkuschner.FitnessTracker.Activity.WorkoutRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -22,11 +23,13 @@ public class FitnessTrackerApplication {
 		log.info("Hello World!");
 	}
 
+	/*
 	@Bean
-	CommandLineRunner runner() {
+	CommandLineRunner runner(WorkoutRepository workoutRepository) {
 		return args -> {
 			Workout workout = new Workout(1, LocalDateTime.now(), LocalDateTime.now().plus(1, ChronoUnit.HOURS), Activity.CARDIO);
-			log.info("Workout: " + workout);
+			workoutRepository.create(workout);
 		};
 	}
+	 */
 }
