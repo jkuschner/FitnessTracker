@@ -1,4 +1,4 @@
-package dev.jkuschner.FitnessTracker.Activity;
+package dev.jkuschner.FitnessTracker.WorkoutType;
 
 import java.util.List;
 

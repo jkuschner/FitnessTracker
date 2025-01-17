@@ -1,16 +1,11 @@
-package dev.jkuschner.FitnessTracker.Activity;
+package dev.jkuschner.FitnessTracker.WorkoutType;
 
-import jakarta.annotation.PostConstruct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.cglib.core.Local;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.Assert;
 
-import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -33,23 +28,23 @@ public class WorkoutRepository {
     }
 
     public Optional<Workout> findById(Integer id) {
-        return jdbcClient.sql("SELECT id,start_time,end_time,activity FROM Workout WHERE id = :id")
+        return jdbcClient.sql("SELECT id,start_time,end_time,workout_type FROM Workout WHERE id = :id")
                 .param("id", id)
                 .query(Workout.class)
                 .optional();
     }
 
     public void create(Workout workout) {
-        var updated = jdbcClient.sql("INSERT INTO Workout(id,start_time,end_time,activity) values(?,?,?,?)")
-                .params(List.of(workout.id(), workout.startTime(), workout.endTime(), workout.activity().toString()))
+        var updated = jdbcClient.sql("INSERT INTO Workout(id,start_time,end_time,workout_type) values(?,?,?,?)")
+                .params(List.of(workout.id(), workout.startTime(), workout.endTime(), workout.workoutType().toString()))
                 .update();
 
         Assert.state(updated == 1, "Failed to create workout " + workout.id());
     }
 
     public void update(Workout workout, Integer id) {
-        var updated = jdbcClient.sql("update workout set start_time = ?, end_time = ?, activity = ? where id = ?")
-                .params(List.of(workout.startTime(),workout.endTime(),workout.activity().toString(), id))
+        var updated = jdbcClient.sql("update workout set start_time = ?, end_time = ?, workout_type = ? where id = ?")
+                .params(List.of(workout.startTime(),workout.endTime(),workout.workoutType().toString(), id))
                 .update();
 
         Assert.state(updated == 1, "Failed to update workout " + workout.id());
@@ -74,9 +69,9 @@ public class WorkoutRepository {
         workouts.stream().forEach(this::create);
     }
 
-    public List<Workout> findByActivity(String activity) {
-        return jdbcClient.sql("select * from workout where activity = :activity")
-                .param("activity", activity)
+    public List<Workout> findByActivity(String workoutType) {
+        return jdbcClient.sql("select * from workout where workout_type = :workoutType")
+                .param("workout_type", workoutType)
                 .query(Workout.class)
                 .list();
     }

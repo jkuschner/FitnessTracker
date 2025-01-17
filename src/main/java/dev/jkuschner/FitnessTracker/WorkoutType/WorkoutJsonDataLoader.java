@@ -1,6 +1,5 @@
-package dev.jkuschner.FitnessTracker.Activity;
+package dev.jkuschner.FitnessTracker.WorkoutType;
 
-import com.fasterxml.jackson.core.ObjectCodec;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,4 +1,4 @@
-package dev.jkuschner.FitnessTracker.Activity;
+package dev.jkuschner.FitnessTracker.WorkoutType;
 
 import jakarta.validation.constraints.Positive;
 
@@ -9,7 +9,7 @@ public record Workout(
         Integer id,
         LocalDateTime startTime,
         LocalDateTime endTime,
-        Activity activity
+        WorkoutType workoutType
 
 ) {
 

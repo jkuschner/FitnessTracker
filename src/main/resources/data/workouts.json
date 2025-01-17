@@ -4,61 +4,61 @@
       "id": 1,
       "startTime": "2024-08-02T17:07:51.582495",
       "endTime": "2024-08-02T18:07:51.582495",
-      "activity": "CARDIO"
+      "workoutType": "CARDIO"
     },
     {
       "id": 2,
       "startTime": "2024-08-02T17:07:51.582495",
       "endTime": "2024-08-02T18:07:51.582495",
-      "activity": "GYM"
+      "workoutType": "GYM"
     },
     {
       "id": 3,
       "startTime": "2024-08-02T17:07:51.582495",
       "endTime": "2024-08-02T18:07:51.582495",
-      "activity": "SERVES"
+      "workoutType": "SERVES"
     },
     {
       "id": 4,
       "startTime": "2024-08-02T17:07:51.582495",
       "endTime": "2024-08-02T18:07:51.582495",
-      "activity": "CARDIO"
+      "workoutType": "CARDIO"
     },
     {
       "id": 5,
       "startTime": "2024-08-02T17:07:51.582495",
       "endTime": "2024-08-02T18:07:51.582495",
-      "activity": "HITTING"
+      "workoutType": "HITTING"
     },
     {
       "id": 6,
       "startTime": "2024-08-02T17:07:51.582495",
       "endTime": "2024-08-02T18:07:51.582495",
-      "activity": "STRETCH"
+      "workoutType": "STRETCH"
     },
     {
       "id": 7,
       "startTime": "2024-08-02T17:07:51.582495",
       "endTime": "2024-08-02T18:07:51.582495",
-      "activity": "HITTING"
+      "workoutType": "HITTING"
     },
     {
       "id": 8,
       "startTime": "2024-08-02T17:07:51.582495",
       "endTime": "2024-08-02T18:07:51.582495",
-      "activity": "CARDIO"
+      "workoutType": "CARDIO"
     },
     {
       "id": 9,
       "startTime": "2024-08-02T17:07:51.582495",
       "endTime": "2024-08-02T18:07:51.582495",
-      "activity": "SERVES"
+      "workoutType": "SERVES"
     },
     {
       "id": 10,
       "startTime": "2024-08-02T17:07:51.582495",
       "endTime": "2024-08-02T18:07:51.582495",
-      "activity": "GYM"
+      "workoutType": "GYM"
     }
   ]
 }
